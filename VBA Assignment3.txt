@@ -1,0 +1,20 @@
+Sub AddNumbersA()
+
+Range("G12") = Range("D4") + InputBox("Enter a number to add to the value of cell D4:")
+End Sub
+
+Sub AddNumbersB()
+
+ActiveCell.Offset(-3, 2) = ActiveCell + InputBox("Enter a number to add to the active cell:")
+End Sub
+Sub WherePutMe()
+Range(InputBox("letter of column") & InputBox("number of rows")) = Selection.Cells(2, 2)
+
+End Sub
+
+Sub Swap()
+Range("C4") = Selection.Cells(1, 1)
+Selection.Cells(1, 1) = Selection.Cells(1, 2)
+Selection.Cells(1, 2) = Range("C4")
+
+End Sub
