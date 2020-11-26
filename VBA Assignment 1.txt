@@ -1,0 +1,13 @@
+Sub FormatCells()
+    'a) Formats the active cell as follows: font type Arial, font size 14, bold font and horizontally centered
+    With ActiveCell.Font
+        .Name = "Arial"
+        .Size = 14
+        .Bold = True
+    End With
+    ActiveCell.HorizontalAlignment = xlCenter
+    'b) Deletes the entire row below the active cell
+    ActiveCell.Offset(1, 0).EntireRow.Delete
+    'c) Deletes column A regardless of the location of the active cell
+    Columns("A:A").Delete
+End Sub
