@@ -1,0 +1,43 @@
+Sub squareroot()
+Dim x As Double, y As Double
+x = InputBox("enter a number")
+y = Sqr(x)
+Range("C3") = FormatNumber(y, 2)
+End Sub
+------------------------------------
+Sub ex3()
+Dim x As Double, y As Double
+x = Selection.Cells(2, 2)
+y = x ^ 2
+Range("A1") = y
+End Sub
+------------------------------------
+Sub EX()
+Dim nr As Integer, nc As Integer
+nr = Selection.Rows.Count
+nc = Selection.Columns.Count
+MsgBox ("Yourselection has" & nr & "rows and" & nc & "columns")
+
+End Sub
+
+------------------------------------
+Sub Ex4()
+Dim x As Double, y As Double, z As Double
+x = InputBox("please enter a number:")
+y = ActiveCell
+z = x + y
+ActiveCell.Offset(2, 2) = z
+End Sub
+
+------------------------------------
+Option Explicit
+Sub errorhandling()
+Dim x As Double
+On Error GoTo Here
+x = InputBox("please enter volume in gallons:")
+MsgBox (x & "gallon is equal to" & formulanumber(x / 7.48, 2) & "cubic feet.")
+Exit Sub
+
+Here:
+MsgBox ("There was an error")
+End Sub
