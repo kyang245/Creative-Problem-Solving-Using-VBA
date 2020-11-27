@@ -76,3 +76,8 @@ y = y + 1
 GoTo Here:
 End Sub
 ------------------------------------
+Sub k()
+Interest = Worksheets("sheet1").Range("C1").Value
+Range("B3") = Interest
+End Sub
+------------------------------------
