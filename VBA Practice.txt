@@ -81,3 +81,28 @@ Interest = Worksheets("sheet1").Range("C1").Value
 Range("B3") = Interest
 End Sub
 ------------------------------------
+Sub Macro2()
+'
+' Macro2 Macro
+'
+' Keyboard Shortcut: Ctrl+Shift+I
+'
+    Range("C14").Select
+    ActiveCell.FormulaR1C1 = "lala"
+    Range("C15").Select
+    ActiveCell.FormulaR1C1 = "123"
+    Range("C16").Select
+    ActiveCell.FormulaR1C1 = "=SUM(1,1)"
+    Range("C17").Select
+    ActiveCell.FormulaR1C1 = "=NOW()"
+    Range("C14:C17").Select
+    Selection.Font.Italic = True
+    With Selection.Font
+        .ThemeColor = xlThemeColorAccent6
+        .TintAndShade = 0
+    End With
+    Selection.Font.Bold = True
+    Selection.Font.Size = 12
+    Range("C11").Select
+End Sub
+------------------------------------
