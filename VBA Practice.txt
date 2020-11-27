@@ -47,3 +47,8 @@ Sum = 10 * 10
 MsgBox "answer is" & Sum
 End Sub
 ------------------------------------
+Function Addtwo(arg1, arg2)
+Addtwo = arg1 + arg2
+
+End Function
+------------------------------------
