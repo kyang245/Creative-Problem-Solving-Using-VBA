@@ -41,3 +41,9 @@ Exit Sub
 Here:
 MsgBox ("There was an error")
 End Sub
+------------------------------------
+Sub addemup()
+Sum = 10 * 10
+MsgBox "answer is" & Sum
+End Sub
+------------------------------------
