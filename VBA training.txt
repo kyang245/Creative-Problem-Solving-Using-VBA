@@ -1,6 +1,0 @@
-Sub Whatwillhappen()
-Dim y As Integer
-y = InputBox("please enter a number:")
-ActiveCell.Offset(Range("B2:D5").Cells(3, y), Selection.Cells(3, y)).Select
-MsgBox Cells(y + 1, ActiveCell - 1)
-End Sub
