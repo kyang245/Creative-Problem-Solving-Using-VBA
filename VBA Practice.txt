@@ -106,3 +106,10 @@ Sub Macro2()
     Range("C11").Select
 End Sub
 ------------------------------------
+Sub Font()
+Selection.Font.Italic = True
+Selection.Font.Size = 14
+Selection.Font.Bold = True
+Selection.Font.ThemeColor = 7
+End Sub
+------------------------------------
