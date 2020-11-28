@@ -138,3 +138,12 @@ Sub Copyone()
     Range("A3").Copy Range("E5")
 End Sub
 ------------------------------------
+Sub Copyone()
+    Worksheets("kk").Activate
+    Range("A3").Copy Destination:=Range("C5")
+End Sub
+------------------------------------
+Sub Addaworkbook()
+    Workbooks.Add
+End Sub
+------------------------------------
