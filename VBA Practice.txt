@@ -129,3 +129,7 @@ Sub Changevlaue()
     Worksheets("kk").Range("A1").Value = "MOS4313"
 End Sub
 ------------------------------------
+Sub Countboooks()
+    MsgBox Workbooks.Count
+End Sub
+------------------------------------
