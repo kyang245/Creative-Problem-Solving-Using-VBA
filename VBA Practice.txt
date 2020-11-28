@@ -133,3 +133,8 @@ Sub Countboooks()
     MsgBox Workbooks.Count
 End Sub
 ------------------------------------
+Sub Copyone()
+    Worksheets("kk").Activate
+    Range("A3").Copy Range("E5")
+End Sub
+------------------------------------
