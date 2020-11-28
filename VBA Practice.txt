@@ -113,3 +113,10 @@ Selection.Font.Bold = True
 Selection.Font.ThemeColor = 7
 End Sub
 ------------------------------------
+Sub Guessname()
+    Msg = "Is your name " & Application.UserName & "?"
+    Ans = MsgBox(Msg, vbYesNo)
+    If Ans = vbNo Then MsgBox " Never Mind :("
+    If Ans = vbYes Then MsgBox " ok thank you!"    
+End Sub
+------------------------------------
