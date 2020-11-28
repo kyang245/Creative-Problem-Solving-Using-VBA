@@ -120,3 +120,8 @@ Sub Guessname()
     If Ans = vbYes Then MsgBox " ok thank you!"    
 End Sub
 ------------------------------------
+Sub Tellvalue()
+    Contents = Worksheets("kk").Range("A1").Value
+    MsgBox Contents
+End Sub
+------------------------------------
