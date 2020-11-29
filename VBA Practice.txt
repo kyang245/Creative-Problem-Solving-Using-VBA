@@ -147,3 +147,7 @@ Sub Addaworkbook()
     Workbooks.Add
 End Sub
 ------------------------------------
+Function Square(number)
+ Square = number ^ 2
+End Function
+------------------------------------
