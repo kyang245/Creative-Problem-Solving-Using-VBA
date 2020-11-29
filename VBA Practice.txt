@@ -163,3 +163,9 @@ If x Mod 2 = 0 Then
 End If
 End Sub
 ------------------------------------
+Sub Ifthen()
+If IsEmpty(ActiveCell) Then
+ActiveCell = "empty"
+End If
+End Sub
+------------------------------------
