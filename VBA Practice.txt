@@ -150,4 +150,8 @@ End Sub
 Function Square(number)
  Square = number ^ 2
 End Function
+Sub Squares()
+  ans = Square(12)
+  MsgBox ans
+End Sub
 ------------------------------------
