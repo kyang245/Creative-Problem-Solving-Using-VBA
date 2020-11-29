@@ -155,3 +155,11 @@ Sub Squares()
   MsgBox ans
 End Sub
 ------------------------------------
+Sub Ifthen()
+Dim x As Integer
+x = InputBox("Please enter an integer")
+If x Mod 2 = 0 Then
+ MsgBox ("Your number is even.")
+End If
+End Sub
+------------------------------------
