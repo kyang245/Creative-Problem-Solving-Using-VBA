@@ -225,3 +225,14 @@ grade = "Fail"
 End If
 End Function
 ------------------------------------
+Sub dolooppractice()
+Dim x As Double
+x = 20
+Do
+    x = Sqr(x)
+    If x < 1.1 Then Exit Do
+    x = x ^ 1.5
+Loop
+MsgBox x
+End Sub
+------------------------------------
