@@ -236,3 +236,13 @@ Loop
 MsgBox x
 End Sub
 ------------------------------------
+Sub dowhile()
+Dim i As Integer, ilim As Integer
+ilim = 2655
+i = 4
+Do While i < ilim
+i = i + 1
+Loop
+MsgBox i
+End Sub
+------------------------------------
