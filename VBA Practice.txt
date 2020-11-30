@@ -209,3 +209,19 @@ z = z + 1
 Range("A1").Value = z
 End Sub
 ------------------------------------
+Function grade(score As Double) As String
+If score >= 90 Then
+grade = "A"
+ElseIf score >= 80 Then
+grade = "B"
+ElseIf score >= 70 Then
+grade = "C"
+ElseIf score >= 60 Then
+grade = "D"
+ElseIf score >= 50 Then
+grade = "Pass"
+Else
+grade = "Fail"
+End If
+End Function
+------------------------------------
