@@ -246,3 +246,13 @@ Loop
 MsgBox i
 End Sub
 ------------------------------------
+Sub loopuntil()
+Dim i As Integer, ilim As Integer
+ilim = 2666
+i = 2665
+Do
+i = i + 1
+Loop Until i >= ilim
+MsgBox i
+End Sub
+------------------------------------
