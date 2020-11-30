@@ -177,3 +177,17 @@ ActiveCell = ActiveCell - 20
 End If
 End Sub
 ------------------------------------
+Function bizbuz(x As Integer) As String
+If x Mod 3 = 0 Then
+    If x Mod 5 = 0 Then
+        bizbuz = "BizBuz"
+    Else
+        bizbuz = "Biz"
+    End If
+Else
+    If x Mod 5 = 0 Then
+        bizbuz = "buz"
+    End If
+End If
+End Function
+------------------------------------
