@@ -256,3 +256,12 @@ Loop Until i >= ilim
 MsgBox i
 End Sub
 ------------------------------------
+Sub inputVerify()
+Dim p As Double
+Do
+p = InputBox(" enter your input: ")
+If p <= 100 And p >= 0 Then Exit Do
+MsgBox (" try again, not in the correct range")
+Loop
+End Sub
+------------------------------------
