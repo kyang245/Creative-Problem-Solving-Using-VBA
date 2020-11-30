@@ -202,3 +202,10 @@ Const dates As Date = #1/1/1999#
 MsgBox dates
 End Sub
 ------------------------------------
+Sub dd()
+Dim z As Integer
+z = activecell.Value
+z = z + 1
+Range("A1").Value = z
+End Sub
+------------------------------------
