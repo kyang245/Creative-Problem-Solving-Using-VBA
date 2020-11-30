@@ -191,3 +191,9 @@ Else
 End If
 End Function
 ------------------------------------
+Function Presentvalue(x As Integer) As Integer
+Const period = 12
+Const r = 0.1
+Presentvalue = x * (1 + 0.1) ^ -12
+End Function
+------------------------------------
