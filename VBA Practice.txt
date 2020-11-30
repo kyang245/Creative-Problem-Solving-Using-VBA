@@ -197,3 +197,8 @@ Const r = 0.1
 Presentvalue = x * (1 + 0.1) ^ -12
 End Function
 ------------------------------------
+Sub dates()
+Const dates As Date = #1/1/1999#
+MsgBox dates
+End Sub
+------------------------------------
