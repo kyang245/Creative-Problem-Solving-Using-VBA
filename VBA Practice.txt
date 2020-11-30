@@ -169,3 +169,11 @@ ActiveCell = "empty"
 End If
 End Sub
 ------------------------------------
+Sub addorsubtract()
+If ActiveCell > 0 Then
+ActiveCell = ActiveCell + 20
+Else
+ActiveCell = ActiveCell - 20
+End If
+End Sub
+------------------------------------
