@@ -319,3 +319,11 @@ For i = 1 To n
 Next
 End Sub
 ------------------------------------
+Sub findseven()
+Dim i As Integer, nr As Integer
+nr = Selection.Cells.Count
+For i = 1 To nr
+    If Selection.Cells(i, 1) = 7 Then MsgBox ("you found a 7")
+Next i
+End Sub
+------------------------------------
