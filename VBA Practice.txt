@@ -276,3 +276,12 @@ Loop
 MsgBox ("good job, smarty")
 End Sub
 ------------------------------------
+Sub countfive()
+Dim nr As Integer, i As Integer, r As Integer
+nr = Selection.Rows.Count
+For i = 1 To nr
+    If Selection.Cells(i, 1) = 5 Then c = c + 1
+Next i
+MsgBox ("there are" & c & "fives")
+End Sub
+------------------------------------
