@@ -295,3 +295,12 @@ For i = 1 To nr
 Next i
 End Sub
 ------------------------------------
+Sub delete9998()
+Dim nr As Integer, i As Integer
+nr = Selection.Rows.Count
+For i = 1 To nr
+    If ActiveCell = 999 Or ActiveCell = 998 Then ActiveCell.Clear
+ActiveCell.Offset(1, 0).Select
+Next i
+End Sub
+------------------------------------
