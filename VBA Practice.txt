@@ -342,3 +342,18 @@ Sub clear()
 Columns("C").clear
 End Sub
 ------------------------------------
+Sub findseven()
+Dim i As Integer, nr As Integer, c As Integer
+Call Reset
+nr = Selection.Rows.Count
+For i = 1 To nr
+    If Selection.Cells(i, 1) = 7 Then
+        c = c + 1
+        If c = 1 Then
+            Range("C1") = "found a 7 in row:"
+        End If
+        Range("c" & c + 1) = i
+    End If
+Next i
+End Sub
+------------------------------------
