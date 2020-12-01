@@ -327,3 +327,14 @@ For i = 1 To nr
 Next i
 End Sub
 ------------------------------------
+Sub findseven()
+Dim i As Integer, nr As Integer, c As Integer
+nr = Selection.Rows.Count
+For i = 1 To nr
+    If Selection.Cells(i, 1) = 7 Then
+        c = c + 1
+        Range("c" & c) = i
+    End If
+Next i
+End Sub
+------------------------------------
