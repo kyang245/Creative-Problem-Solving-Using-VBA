@@ -338,3 +338,7 @@ For i = 1 To nr
 Next i
 End Sub
 ------------------------------------
+Sub clear()
+Columns("C").clear
+End Sub
+------------------------------------
