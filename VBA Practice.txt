@@ -357,3 +357,19 @@ For i = 1 To nr
 Next i
 End Sub
 ------------------------------------
+Sub findseven()
+Dim rng As Object, itm As Object, c As Integer
+Call Reset
+nr = Selection.Rows.Count
+Set rng = Selection
+For Each itm In rng
+    If itm = 7 Then
+        c = c + 1
+        If c = 1 Then
+            Range("C1") = "found a 7 in row:"
+        End If
+        Range("c" & c + 1) = itm.Rows
+    End If
+Next
+End Sub
+------------------------------------
