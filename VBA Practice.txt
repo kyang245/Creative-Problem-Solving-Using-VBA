@@ -285,3 +285,13 @@ Next i
 MsgBox ("there are" & c & "fives")
 End Sub
 ------------------------------------
+Sub Delete()
+Dim nr As Integer, i As Integer
+nr = Selection.Rows.Count
+For i = 1 To nr
+    If Selection.Cells(i, 1) = 999 Or Selection.Cells(i, 1) = 998 Then
+    Selection.Cells(i, 1) = ""
+    End If
+Next i
+End Sub
+------------------------------------
