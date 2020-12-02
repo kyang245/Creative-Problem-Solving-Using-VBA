@@ -373,3 +373,23 @@ For Each itm In rng
 Next
 End Sub
 ------------------------------------
+Sub Guessgame()
+Dim n As Integer, G As Integer
+n = WorksheetFunction.RandBetween(1, 10)
+Do
+    Do
+        G = InputBox("enter a number between 1 to 10")
+        If G <= 10 And G >= 0 Then
+        Exit Do
+    ElseIf G > 10 Then
+        MsgBox (" wrong, out of range, too big, try again")
+    ElseIf G < 1 Then
+        MsgBox (" wrong, too small, try agian")
+    End If
+    Loop
+    If G = n Then Exit Do
+    MsgBox ("wrong,try again or you can quit, suit yourself!")
+Loop
+MsgBox ("Finally, you got it. Good job! Still, try better next time")
+End Sub
+------------------------------------
