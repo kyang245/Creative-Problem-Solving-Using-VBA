@@ -383,3 +383,15 @@ Here:
     MsgBox ("you made an error in the input selection or you decided to cancel and quit")
 End Sub
 ------------------------------------
+Option Explicit
+Sub whatdoesthisdo()
+Dim i As Integer, j As Integer, k As Integer
+For i = 1 To 3
+    For j = 1 To 3
+    k = i + j
+    Next j
+    If k = 5 Then Exit For
+Next i
+MsgBox j / i
+End Sub
+------------------------------------
