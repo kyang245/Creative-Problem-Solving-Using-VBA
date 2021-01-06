@@ -420,3 +420,15 @@ Loop
 MsgBox n
 End Sub
 ------------------------------------
+Function tank(R As Double, H As Double, D As Double) As Double
+Dim pi As Double
+pi = Application.WorksheetFunction.pi()
+If D <= R Then
+tank = ((pi * D ^ 2) / 3) * (3 * R - D)
+ElseIf R < D <= (H - R) Then
+tank = (2 * pi * R ^ 3) / 3 + pi * R ^ 2 * (D - R)
+ElseIf (H - R) < D <= H Then
+tank = (4 * pi * R ^ 3) / 3 + pi * (R ^ 2) * (H - 2 * R) - (pi * (H - D) ^ 2) / 3 * (3 * R - H + D)
+End If
+End Function
+------------------------------------
