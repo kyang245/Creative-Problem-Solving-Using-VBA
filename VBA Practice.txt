@@ -432,3 +432,32 @@ tank = (4 * pi * R ^ 3) / 3 + pi * (R ^ 2) * (H - 2 * R) - (pi * (H - D) ^ 2) / 
 End If
 End Function
 ------------------------------------
+Option Explicit
+
+Function prime(n As Integer) As Boolean
+    Dim i As Integer
+    prime = True
+
+    If n = 1 Then
+        prime = False
+    ElseIf n > 2 Then
+        For i = 2 To n - 1
+            If n Mod i = 0 Then
+                prime = False
+                Exit Function
+            End If
+        Next i
+    End If
+End Function
+
+Function countprime(n1 As Integer, n2 As Integer) As Integer
+    Dim i As Integer, B As Long
+    For i = n1 To n2
+        If prime(i) Then B = 1 Else B = 0
+Debug.Print "OLDcount", countprime
+Debug.Print "PLUS", B, i, prime(i)
+        countprime = countprime - prime(i)
+Debug.Print "NEWcount", countprime
+Debug.Print
+    Next i
+------------------------------------
