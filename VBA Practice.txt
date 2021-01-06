@@ -395,3 +395,13 @@ Next i
 MsgBox j / i
 End Sub
 ------------------------------------
+Sub mass()
+Dim what As Double
+Dim i As Integer
+what = ActiveCell.Value
+For i = 1 To 3
+    ActiveCell.Offset(i - 1, 0) = ActiveCell.Offset(i, 0)
+Next i
+ActiveCell.Offset(3, 0) = what
+End Sub
+------------------------------------
