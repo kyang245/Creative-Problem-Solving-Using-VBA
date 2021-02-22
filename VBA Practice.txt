@@ -557,4 +557,15 @@ A = Selection
 MsgBox A(2, 2)
 End Sub
  ------------------------------------
-
+Option Explicit
+Sub exportarray()
+Dim i As Integer, j As Integer
+Dim A(3, 3) As Integer
+For i = 1 To 3
+    For j = 1 To 3
+        A(i, j) = 2 * i + j
+        Range("B2:D4").Cells(i, j) = A(i, j)
+    Next j
+Next i
+End Sub
+ ------------------------------------
