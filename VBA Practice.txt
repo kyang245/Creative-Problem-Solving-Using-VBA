@@ -461,3 +461,29 @@ Debug.Print "NEWcount", countprime
 Debug.Print
     Next i
 ------------------------------------
+Option Explicit
+Option Base 1
+Sub Evaluate()
+Dim xval(4) As Double, xm As Double
+Dim i As Integer
+Range("A1").Select
+For i = 1 To 4
+    xval(i) = ActiveCell.Offset(i - 1, 0).Value
+Next i
+xm = xval(1)
+For i = 2 To 4
+    If xval(i) > xm Then
+        xm = xval(i)
+    End If
+Next i
+ActiveCell.Offset(0, 2).Value = xm
+xm = xval(1)
+For i = 2 To 4
+    If xval(i) < xm Then
+     xm = xval(i)
+    End If
+Next i
+    ActiveCell.Offset(1, 2).Value = xm
+    ActiveCell.Offset(2, 1).Select
+End Sub
+ ------------------------------------   
