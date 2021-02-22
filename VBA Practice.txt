@@ -487,3 +487,27 @@ Next i
     ActiveCell.Offset(2, 1).Select
 End Sub
  ------------------------------------   
+Option Explicit
+Sub somesubroutine()
+Dim A As Variant, k As Integer
+Dim i As Integer, j As Integer
+k = 1
+ReDim A(k) As Variant
+A(0) = WorksheetFunction.RandBetween(1, 10)
+A(1) = "hello"
+For i = 1 To 4
+A = Somefunction(A, k)
+k = k + 1
+ReDim Preserve A(k) As Variant
+A(k) = WorksheetFunction.RandBetween(1, 10)
+Next i
+Range("A1:A" & k + 1) = WorksheetFunction.Transpose(A)
+End Sub
+Function Somefunction(A As Variant, k As Integer) As Variant
+Dim i As Integer, B() As Variant
+ReDim B(k) As Variant
+For i = 0 To k
+Next i
+Somefunction = B
+End Function
+ ------------------------------------
