@@ -3,52 +3,37 @@ VBA Part 1 Assignment 5
 Option Explicit
 
 Function truck(r As Double, d As Double, f As Double, w As Double, c As Boolean) As Double
-Dim i As Integer, sLow As Double, sHigh As Double, GR As Double, eff As Double
-Dim x1 As Double, x2 As Double, h As Double, prof As Double, cost As Double
-Dim fx1 As Double, fx2 As Double, s As Double
-GR = (Sqr(5) - 1) / 2
-r = Range("B2")
-d = Range("B3")
-f = Range("B4")
-w = Range("B5")
-eff = (6.12 - (w / 60000)) * 0.92 ^ ((s - 55) / 5)
-sLow = 30
-sHigh = 100
-cost = f * s / eff
-s = (sLow + sHigh) / 2
-h = sHigh - sLow
-x1 = sLow + GR * h
-x2 = sHigh - GR * h
-For i = 1 To 200
-    fx1 = profit(x1)
-    fx2 = profit(x2)
-    If fx1 < fx2 Then
-        sLow = sLow
-        sHigh = x1
-        x1 = x2
-        x2 = sHigh - GR * (sHigh - sLow)
-    Else
-        sLow = x2
-        x2 = x1
-        sHigh = sHigh
-        x1 = sLow + GR * (sHigh - sLow)
-    End If
-Next i
-If c = True Then
-    truck = FormatNumber((sLow + sHigh) / 2, 2)
-Else
-    truck = (r * ((sLow + sHigh) / 2) / d) - (f * ((sLow + sHigh) / 2) / eff)
-End If
-End Function
+'Place your code here
 
-Function profit(x) As Double
-Dim f As Double, s As Double, eff As Double, r As Double, w As Double
-Dim d As Double, sLow As Double, sHigh As Double
-r = Range("B2")
-d = Range("B3")
-f = Range("B4")
-w = Range("B5")
-s = (sLow + sHigh) / 2
-eff = (6.12 - (w / 60000)) * 0.92 ^ ((x - 55) / 5)
-profit = ((r * x / d) - (f * x / eff))
+Dim i As Integer, a As Double, b As Double, da As Double, fx1 As Double, fx2 As Double, x1 As Double, x2 As Double, GR As Double, e1 As Double, e2 As Double
+
+
+a = 30
+b = 100
+
+GR = (Sqr(5) - 1) / 2
+
+
+
+For i = 1 To 20
+  
+  
+    da = GR * (b - a)
+    x1 = (a + da)
+    x2 = (b - da)
+    e1 = (6.12 - (w / 60000)) * 0.92 ^ ((x1 - 55) / 5)
+    e2 = (6.12 - (w / 60000)) * 0.92 ^ ((x2 - 55) / 5)
+    fx1 = ((r * x1 / d) - (f * x1 / e1))
+    fx2 = ((r * x2 / d) - (f * x2 / e2))
+    If fx1 < fx2 Then
+        b = x1
+    Else
+        a = x2
+    End If
+    Next i
+If c = True Then
+    truck = FormatNumber((x1 + x2) / 2, 2)
+    Else
+     truck = FormatNumber((fx1 + fx2) / 2, 2)
+End If
 End Function
