@@ -511,3 +511,14 @@ Next i
 Somefunction = B
 End Function
  ------------------------------------
+Sub Addfive()
+Dim i As Integer, j As Integer
+Dim nr As Integer, nc As Integer
+nr = Selection.Rows.Count
+nc = Selection.Columns.Count
+    For i = 1 To nr
+        For j = 1 To nc
+        Selection.Cells(i, j) = Selection.Cells(i, j) + 5
+        Next j
+    Next i
+End Sub
