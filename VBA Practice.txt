@@ -582,3 +582,21 @@ Next i
 Selection = A
 End Sub
  ------------------------------------
+Option Explicit
+Option Base 1
+Sub CountDivisibleByN()
+Dim i As Integer, j As Integer, n As Integer
+Dim nr As Integer, nc As Integer, c As Integer
+nr = Selection.Rows.Count
+nc = Selection.Columns.Count
+n = InputBox("please enter an integer.")
+    For i = 1 To nr
+        For j = 1 To nc
+            If Selection.Cells(i, j) Mod n = 0 Then
+              c = c + 1
+            End If
+        Next j
+    Next i
+MsgBox ("There were " & c & " items divisible by " & n & ".")
+End Sub
+ ------------------------------------
