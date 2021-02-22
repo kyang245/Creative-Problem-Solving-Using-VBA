@@ -600,3 +600,20 @@ n = InputBox("please enter an integer.")
 MsgBox ("There were " & c & " items divisible by " & n & ".")
 End Sub
  ------------------------------------
+Option Explicit
+Option Base 1
+Function CountDivisibleByN(rng As Range, n As Integer) As Integer
+Dim i As Integer, j As Integer
+Dim nr As Integer, nc As Integer, c As Integer
+nr = rng.Rows.Count
+nc = rng.Columns.Count
+    For i = 1 To nr
+        For j = 1 To nc
+            If rng.Cells(i, j) Mod n = 0 Then
+              c = c + 1
+            End If
+        Next j
+    Next i
+CountDivisibleByN = c
+End Function
+-------------------------------------
