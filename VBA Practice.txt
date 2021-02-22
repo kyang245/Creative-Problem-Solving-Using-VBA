@@ -534,3 +534,27 @@ A(2, 2) = 1
 Range("A1:B2") = A
 End Sub
  ------------------------------------
+Option Explicit
+Sub importrray()
+Dim i As Integer, j As Integer
+Dim nr As Integer, nc As Integer
+Dim A() As Integer
+nr = Selection.Rows.Count
+nc = Selection.Columns.Count
+ReDim A(nr, nc) As Integer
+For i = 1 To nr
+    For j = 1 To nc
+    A(i, j) = Selection.Cells(i, j)
+    Next j
+Next i
+MsgBox A(2, 2)
+End Sub
+ ------------------------------------
+ Option Explicit
+Sub importarray()
+Dim A() As Variant
+A = Selection
+MsgBox A(2, 2)
+End Sub
+ ------------------------------------
+
