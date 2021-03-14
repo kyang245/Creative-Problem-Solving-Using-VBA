@@ -617,3 +617,15 @@ nc = rng.Columns.Count
 CountDivisibleByN = c
 End Function
 -------------------------------------
+Function Factorial(n As Integer) As Long
+    Dim fact As Long
+    fact = 1
+  Debug.Print "fact = " & fact
+    For i = 1 To n
+        fact = fact * i
+   Debug.Print "i = " & i, "fact = " & fact
+    Next i
+    Debug.Print "fact = " & fact
+    Factorial = fact
+End Function
+-------------------------------------
