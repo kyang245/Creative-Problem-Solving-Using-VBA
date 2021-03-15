@@ -629,3 +629,18 @@ Function Factorial(n As Integer) As Long
     Factorial = fact
 End Function
 -------------------------------------
+Function CountPosArray(arr) As Integer
+    Dim count As Integer
+    count = 0
+Debug.Print "conut = " & count, "LBound(arr) = " & LBound(arr), "UBound(arr) = " & UBound(arr)
+    For i = LBound(arr) To UBound(arr)
+Debug.Print "arr(i) =" & arr(i), "i =" & i, "count =" & count
+        If arr(i) >= 0 Then
+        Debug.Print "Message is running"
+            count = count + 1
+        End If
+    Next i
+    CountPosArray = count
+    Debug.Print "count =" & count
+End Function
+-------------------------------------
