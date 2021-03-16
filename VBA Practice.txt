@@ -689,5 +689,6 @@ A = Split(sentence, " ")
     For i = 0 To UBound(A)
     MsgBox A(i)
     Next i
+    Msgbox Join(A)
 End Sub
 -------------------------------------
