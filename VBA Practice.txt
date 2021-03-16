@@ -670,3 +670,9 @@ s = "sfhsafasdangkhgsknfgklsdjlgj"
 MsgBox Len(s)
 End Sub
 -------------------------------------
+Sub strings()
+Dim s As String
+s = "sfhsafasdangkhgsknfgklsdjlgj"
+MsgBox InStr(s, "fas")
+End Sub
+-------------------------------------
