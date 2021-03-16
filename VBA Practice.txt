@@ -683,8 +683,11 @@ MsgBox InStr(10, s, "fgk")
 End Sub
 -------------------------------------
 Sub Splitandjoin()
-Dim sentence As String, A() As String
+Dim sentence As String, A() As String, i As Integer
 sentence = InputBox("please enter a sentence")
 A = Split(sentence, " ")
+    For i = 0 To UBound(A)
+    MsgBox A(i)
+    Next i
 End Sub
 -------------------------------------
