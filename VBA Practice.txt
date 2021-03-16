@@ -644,3 +644,17 @@ Debug.Print "arr(i) =" & arr(i), "i =" & i, "count =" & count
     Debug.Print "count =" & count
 End Function
 -------------------------------------
+Option Explicit
+Sub shoppinglist()
+Dim i As Integer, Ans As Integer, L() As Variant
+Do
+    Ans = MsgBox("Would you like to add an item to the shoppinglist?", vbYesNo)
+    If Ans = 7 Then Exit Do
+    i = i + 1
+    ReDim Preserve L(i) As Variant
+    L(i) = InputBox("Enter new items:")
+
+Loop
+Range("A1:A" & i) = WorksheetFunction.Transpose(L)
+End Sub
+-------------------------------------
