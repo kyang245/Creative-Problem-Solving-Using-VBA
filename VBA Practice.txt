@@ -664,3 +664,9 @@ s = "sfhsafasdangkhgsknfgklsdjlgj"
 MsgBox Mid(s, 10, 10)
 End Sub
 -------------------------------------
+Sub strings()
+Dim s As String
+s = "sfhsafasdangkhgsknfgklsdjlgj"
+MsgBox Len(s)
+End Sub
+-------------------------------------
