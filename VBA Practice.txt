@@ -658,3 +658,9 @@ Loop
 Range("A1:A" & i) = WorksheetFunction.Transpose(L)
 End Sub
 -------------------------------------
+Sub strings()
+Dim s As String
+s = "sfhsafasdangkhgsknfgklsdjlgj"
+MsgBox Mid(s, 10, 10)
+End Sub
+-------------------------------------
