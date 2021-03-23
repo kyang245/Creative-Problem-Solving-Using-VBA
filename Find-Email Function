@@ -1,0 +1,25 @@
+Option Explicit
+Function email(s As Range) As String
+Dim L As Integer, i As Integer
+Dim atLoc As Integer
+Dim StartLoc As Integer, EndLoc As Integer
+L = Len(s)
+atLoc = InStr(s, "@")
+For i = atLoc - 1 To 1 Step -1
+    If Mid(s, i, 1) = ":" Or Mid(s, i, 1) = "<" Or Mid(s, i, 1) = " " Then
+        StartLoc = i + 1
+        Exit For
+    ElseIf i = 1 Then
+        StartLoc = 1
+    End If
+Next i
+For i = atLoc + 1 To L
+    If Mid(s, i, 1) = "]" Or Mid(s, i, 1) = ">" Then
+    EndLoc = i - 1
+    Exit For
+    ElseIf i = L Then
+    EndLoc = L
+    End If
+    Next i
+email = Mid(s, StartLoc, EndLoc - StartLoc + 1)
+End Function
